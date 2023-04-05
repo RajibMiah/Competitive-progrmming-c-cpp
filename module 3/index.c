@@ -2,19 +2,11 @@
 
 int main(){
     int num , i;
-    scanf("%d",&i);
-    do
-    {
+    for(i =1; i<45; i++ ){
         printf("%d\n",i);
-        i -= 1;
-
-    } while (i >= 1);
-    
-    while(i > 0){
-        printf("%d\n",i);
-        i -= 1;
     }
-    return 0;
+    printf("end of line %d", i);
+    return 0; 
 }
 
 
