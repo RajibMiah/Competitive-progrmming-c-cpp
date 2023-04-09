@@ -1,9 +1,8 @@
 #include<stdio.h>
 
 int main(){
-    while(1){
-        int n;
-        scanf("%d",&n);
+    int n;
+    while(scanf("%d",&n) != EOF){ 
         if( n == 1999 ){
             printf("Correct\n");
             break;
