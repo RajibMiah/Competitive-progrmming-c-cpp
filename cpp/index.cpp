@@ -3,19 +3,25 @@ using namespace std;
 const int N = 1e5 + 10;
 int a[N];
 
-int digit_sum(int n){
-    if(n <= 0){
-        return 0;
+void printVector(vector<pair<int , int >> v){
+    cout << "Size: " << v.size() << endl;
+    for(int i=0 ; i< v.size(); i++){
+        cout<< v[i].first<<" " << v[i].second << endl;
     }
-    return digit_sum(n/10) + n % 10;
+    cout<<endl;
 }
 
 int main(){
-    string str1;
-    cin >> str1;
-    cout << str1[str1.size() - 1] - '0';
+    vector<pair<int , int>> v;
+    int n;
+    cin >> n;
+    while(n--){
+        int n1,  n2;
+        cin >> n1 >> n2;
+        v.push_back({n1 , n2});
+    }
+    printVector(v);
 }
-
 // 10 ^ 7 ==== 1 second
 // 10 ^ 8 = 10 second
 // 10 ^ 9 = 100 second
