@@ -17,9 +17,21 @@ bool cmp(pair <int , int> a , pair < int ,int> b){
 // 1 hour	        10^11
 int main(){
     int ttt ; cin >> ttt;
+    vector<long long int> v;
     while (ttt--)
     {
-        
+        long long int n;
+        cin >> n;
+        v.push_back(n);
+    }
+    long long int t;
+    cin >> t;
+    sort(v.begin() , v.end());
+    auto it = lower_bound(v.begin() , v.end() , t);
+    if(it != v.end() && *it == t){
+        cout << (int) distance(v.begin() ,it);
+    }else{
+        cout << -1;
     }
     
 }
