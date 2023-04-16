@@ -18,9 +18,8 @@ bool cmp(pair <int , int> a , pair < int ,int> b){
 int main(){
     int ttt ; cin >> ttt;
     vector<long long int> v;
-    while (ttt--)
-    {
-        long long int n;
+    for(int i = 0 ; i< ttt ; i++){
+        int n;
         cin >> n;
         v.push_back(n);
     }
@@ -31,7 +30,7 @@ int main(){
     if(it != v.end() && *it == t){
         cout << (int) distance(v.begin() ,it);
     }else{
-        cout << -1;
+         cout << -1;
     }
     
 }
