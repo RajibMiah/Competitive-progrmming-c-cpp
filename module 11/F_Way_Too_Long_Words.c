@@ -6,13 +6,10 @@ int main(){
     while (t--)
     {
         char str[101];
-        int count = 0;
-        scanf("%s" , str);
-        for(int  i = 0 ; i < strlen(str) ; ++i){
-            count++;
-        }
+        scanf("%s" , str); 
+        int count = strlen(str);
         if(count > 10){
-            printf("%c%d%c\n",str[0],count - 2 , str[strlen(str) - 1]);
+            printf("%c%d%c\n",str[0], count - 2 , str[strlen(str) - 1]);
         }else{
             printf("%s\n" , str);
         }
