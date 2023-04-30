@@ -1,18 +1,20 @@
 #include<stdio.h>
 
 int main(){
-    int  n = 5 , s , k;
-    s = n - 1;
-    k = 1;
+    int  n = 5 , s , k ;
+    s = 0;
+    k = (n * 2) - 1;
     for(int i = 0 ; i < n ; ++i){
-        for(int  j= 0 ; j < n - i ; ++j){
+        for( int j = 0 ; j < s ; j++) {
             printf(" ");
         }
-        for(int  j = 0 ; j < (2 * i) - 1 ; ++j){
+        for(int j = 0 ; j < k ; ++j){
             printf("*");
         }
-        k+= 2;
+        s++;
+        k -= 2;
         printf("\n");
+        
     }
     return 0;
 }
