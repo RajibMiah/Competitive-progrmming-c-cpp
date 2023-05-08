@@ -1,1 +1,1 @@
-The matrixs is not scalar
+The matrixs is diaognal
