@@ -1,1 +1,1 @@
-zero or null matrix
+The matrixs is diaognal
