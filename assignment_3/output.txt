@@ -1,2 +1,2 @@
-Before passed to the function a and b are : 10 and 5
-After passing to the function by referenced the value of a and b are: 12 and 20
+Before passed to the function the value of  a and b are : 10 and 5
+After passing to the function by reference the value of a and b are: 12 and 20
