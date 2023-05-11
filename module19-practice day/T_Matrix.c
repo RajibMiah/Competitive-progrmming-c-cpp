@@ -21,7 +21,7 @@ int main(){
             }       
         }
     }
-    printf("%d %d\n" , a , b);
-    printf("%d\n" , abs(a) + abs(b));
+    // printf("%d %d\n" , a , b);
+    printf("%d\n" , abs(a - b));
     return 0;
 }
