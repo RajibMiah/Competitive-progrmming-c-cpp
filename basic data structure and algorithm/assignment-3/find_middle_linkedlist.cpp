@@ -43,43 +43,29 @@ void sortLinkedList(Node* &head) {
         }
     }
 }
-
 void printMiddleElements(Node* head) {
-    if (head == NULL) {
-        cout << "Empty list!" << endl;
-        return;
-    }
-
-    Node* slow = head;
-    Node* fast = head;
-    Node* prevSlow = NULL;
-
-    while (fast != NULL && fast->next != NULL) {
-        fast = fast->next->next;
-        prevSlow = slow;
-        slow = slow->next;
-    }
-
-    if (fast == NULL) {
-        // Even number of nodes, print both middle elements
-        cout << "Middle elements: " << prevSlow->val << " and " << slow->val << endl;
-    } else {
-        // Odd number of nodes, print the single middle element
-        cout << "Middle element: " << slow->val << endl;
-    }
-}
-
-
-
-
-void printList(Node* head) {
+  
+    int listSize = 0;
     Node* temp = head;
     while (temp != NULL) {
-        cout << temp->val << " ";
+        listSize++;
         temp = temp->next;
     }
-    cout << endl;
+
+    Node* middle = head;
+    int middleIndex = (listSize + 1) / 2;
+
+    for (int i = 1; i < middleIndex; i++) {
+        middle = middle->next;
+    }
+
+    if (listSize % 2 == 0) {
+          cout << middle->val << " " << middle->next->val << endl;
+    } else {
+       cout << middle->val << endl;
+    }
 }
+
 
 int main() {
     Node* head = NULL;
@@ -93,15 +79,7 @@ int main() {
         insert_val(head, tail, val);
     }
 
-    cout << "Input List: ";
-    printList(head);
-
     sortLinkedList(head);
-
-    cout << "Reversed List: ";
-    printList(head);
-
-    cout << "Middle Element(s): ";
     printMiddleElements(head);
 
     return 0;
