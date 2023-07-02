@@ -10,18 +10,19 @@ class Node {
     }
 };
 
-void insert_tail(Node* head, Node*& tail, int val) {
+void insert_tail(Node*& head, Node*& tail, int val) {
     Node* newNode = new Node(val);
-    
+
     if (head == NULL) {
         head = newNode;
         tail = newNode;
         return;
     } else {
-       tail->next = newNode;
-       tail = tail->next;
+        tail->next = newNode;
+        tail = tail->next;
     }
 }
+
 
 void reverse(Node*& head , Node* curr) {
    
@@ -49,13 +50,15 @@ bool isPalindrome(Node* head){
     temp = head ;
     Node* temp2 = newHead;
 
-    while(temp != NULL){
-        if(temp->val != temp2->val){
-            return false;
-        }
-        temp = temp->next;
-        temp2 = temp->next;
+   while (temp != NULL) {
+    if (temp->val != temp2->val) {
+        return false;
     }
+    temp = temp->next;
+    temp2 = temp2->next;
+   }
+
+    return true;
 }
 
 
@@ -93,5 +96,5 @@ int main(){
         
     }
     bool isPalindromeResult = isPalindrome(head);
-    cout << isPalindromeResult;
-};
+    cout << (isPalindromeResult ? "YES" : "NO") << endl;
+}
